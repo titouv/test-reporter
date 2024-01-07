@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="2" time="0.030" timestamp="2024-01-06T17:15:15.334385" hostname="Titouans-MacBook-Pro.local"><testcase classname="test_capitalize" name="test_capital_case" time="0.000" /><testcase classname="test_capitalize" name="test_capital_case_error" time="0.000"><failure message="AssertionError: assert 'Semaphore' == 'semaphore'&#10;  - semaphore&#10;  ? ^&#10;  + Semaphore&#10;  ? ^">def test_capital_case_error():
+        # error
+&gt;       assert capital_case("semaphore") == "semaphore"
+E       AssertionError: assert 'Semaphore' == 'semaphore'
+E         - semaphore
+E         ? ^
+E         + Semaphore
+E         ? ^
+
+test_capitalize.py:11: AssertionError</failure></testcase></testsuite></testsuites>

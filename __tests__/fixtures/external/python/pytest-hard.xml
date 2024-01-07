@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+    <testsuite name="pytest" errors="0" failures="1" skipped="0" tests="4" time="0.142"
+        timestamp="2024-01-07T17:31:13.494583" hostname="Titouans-MacBook-Pro.local">
+        <testcase classname="tests.test_simple.yaml" name="error1" time="0.018">
+            <failure
+                message="AssertionError: Stdout differs:&#10;  Expected:&#10;  -ne toto&#10;  &#10;  Actual:&#10;  toto&#10;  Diff:&#10;  --- &#10;  +++ &#10;  @@ -1 +1 @@&#10;  --ne toto&#10;  +toto&#10;  &#10;assert '-ne toto\n' == 'toto'&#10;  - toto&#10;  + -ne toto">../../../.pyenv/versions/3.11.0/lib/python3.11/site-packages/_pytest/runner.py:341:
+                in from_call
+                result: Optional[TResult] = func()
+                ../../../.pyenv/versions/3.11.0/lib/python3.11/site-packages/_pytest/runner.py:262:
+                in &lt;lambda&gt;
+                lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+                ../../../.local/lib/python3.11/site-packages/pluggy/_hooks.py:265: in __call__
+                return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+                ../../../.local/lib/python3.11/site-packages/pluggy/_manager.py:80: in _hookexec
+                return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+                ../../../.local/lib/python3.11/site-packages/pluggy/_callers.py:60: in _multicall
+                return outcome.get_result()
+                ../../../.local/lib/python3.11/site-packages/pluggy/_result.py:60: in get_result
+                raise ex[1].with_traceback(ex[2])
+                ../../../.local/lib/python3.11/site-packages/pluggy/_callers.py:39: in _multicall
+                res = hook_impl.function(*args)
+                ../../../.pyenv/versions/3.11.0/lib/python3.11/site-packages/_pytest/runner.py:177:
+                in pytest_runtest_call
+                raise e
+                ../../../.pyenv/versions/3.11.0/lib/python3.11/site-packages/_pytest/runner.py:169:
+                in pytest_runtest_call
+                item.runtest()
+                conftest.py:69: in runtest
+                perform_checks(sh_ref, sh_proc)
+                conftest.py:40: in perform_checks
+                assert (
+                E AssertionError: Stdout differs:
+                E Expected:
+                E -ne toto
+                E
+                E Actual:
+                E toto
+                E Diff:
+                E ---
+                E +++
+                E @@ -1 +1 @@
+                E --ne toto
+                E +toto
+                E
+                E assert '-ne toto\n' == 'toto'
+                E - toto
+                E + -ne toto</failure>
+        </testcase>
+        <testcase classname="tests.test_simple.yaml" name="not_solution" time="0.021" />
+        <testcase classname="tests.test_simple.yaml" name="verison2" time="0.018" />
+        <testcase classname="tests.test_simple.yaml" name="version10" time="0.016" />
+    </testsuite>
+</testsuites>
