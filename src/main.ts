@@ -16,6 +16,7 @@ import {JavaJunitParser} from './parsers/java-junit/java-junit-parser'
 import {JestJunitParser} from './parsers/jest-junit/jest-junit-parser'
 import {MochaJsonParser} from './parsers/mocha-json/mocha-json-parser'
 import {SwiftXunitParser} from './parsers/swift-xunit/swift-xunit-parser'
+import {PythonJunitParser} from './parsers/python-pytest/python-pytest-parser'
 
 import {normalizeDirPath, normalizeFilePath} from './utils/path-utils'
 import {getCheckRunContext} from './utils/github-utils'
@@ -208,6 +209,8 @@ class TestReporter {
 
   getParser(reporter: string, options: ParseOptions): TestParser {
     switch (reporter) {
+      case 'python-junit':
+        return new PythonJunitParser(options)
       case 'dart-json':
         return new DartJsonParser(options, 'dart')
       case 'dotnet-trx':
